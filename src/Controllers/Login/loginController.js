@@ -20,7 +20,7 @@ const loginController = async (email, password) => {
 
     //si es valido generamos token JWT
     const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, {
-      expiresIn: "8h",
+      expiresIn: "3d",
     });
 
     return { token, admin: user.admin, user: user.name };
