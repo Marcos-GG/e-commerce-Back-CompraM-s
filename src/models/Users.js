@@ -39,8 +39,8 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
         validate: {
-          is: {
-            args: /^[a-zA-Z0-9]+$/,
+          len: {
+            args: [2, 8],
           },
         },
       },
