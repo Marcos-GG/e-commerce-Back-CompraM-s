@@ -25,8 +25,7 @@ module.exports = (sequelize) => {
             }
           },
           len: {
-            args: [5, 36],
-            msg: "El título debe tener entre 5 y 36 caracteres.",
+            args: [5, 39],
           },
         },
       },
