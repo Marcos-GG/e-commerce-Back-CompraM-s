@@ -13,6 +13,11 @@ module.exports = (sequelize) => {
       name: {
         type: DataTypes.STRING,
         allowNull: true,
+        validate: {
+          len: {
+            args: [2, 13],
+          },
+        },
       },
 
       email: {
@@ -23,13 +28,23 @@ module.exports = (sequelize) => {
       lastname: {
         type: DataTypes.STRING,
         allowNull: true,
+        validate: {
+          len: {
+            args: [2, 12],
+          },
+        },
       },
 
       password: {
         type: DataTypes.STRING,
         allowNull: true,
+        validate: {
+          is: {
+            args: /^[a-zA-Z0-9]+$/,
+          },
+        },
       },
-      // Numero de documento de identidad del usuario con el atributo que debe ser unico.
+
       DNI: {
         type: DataTypes.INTEGER,
         unique: true,
@@ -41,6 +56,11 @@ module.exports = (sequelize) => {
       phone: {
         type: DataTypes.STRING,
         allowNull: true,
+        validate: {
+          is: {
+            args: /^[0-9]+$/,
+          },
+        },
       },
 
       birthDate: {

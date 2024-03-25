@@ -47,7 +47,6 @@ const controllerApplyFilters = async ({
   if (productosFiltrados.length === 0)
     throw new Error("No se encontraron productos con los filtros aplicados");
 
-  console.log(productosFiltrados.length, "filtrado");
   return { productosFiltrados, totalProducts: productosFiltrados.length };
 };
 

@@ -24,28 +24,28 @@ module.exports = (sequelize) => {
               throw new Error("El titulo debe contener texto válido"); //!
             }
           },
+          len: {
+            args: [5, 36],
+            msg: "El título debe tener entre 5 y 36 caracteres.",
+          },
         },
       },
 
       image1: {
         type: DataTypes.TEXT,
-        allowNull: true, // despues tiene que estar si o si en false
+        allowNull: true,
       },
       image2: {
         type: DataTypes.TEXT,
-        allowNull: true, // despues tiene que estar si o si en false
+        allowNull: true,
       },
       image3: {
         type: DataTypes.TEXT,
-        allowNull: true, // despues tiene que estar si o si en false
+        allowNull: true,
       },
       image4: {
         type: DataTypes.TEXT,
-        allowNull: true, // despues tiene que estar si o si en false
-      },
-      image5: {
-        type: DataTypes.TEXT,
-        allowNull: true, // despues tiene que estar si o si en false
+        allowNull: true,
       },
 
       description: {
@@ -62,10 +62,6 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
 
-      // stock: {
-      //   type: DataTypes.INTEGER,
-      // },
-
       gender: {
         // genero
         type: DataTypes.STRING,
@@ -79,7 +75,6 @@ module.exports = (sequelize) => {
       },
 
       likes: {
-        //like / fav
         type: DataTypes.INTEGER,
         defaultValue: 0,
         validate: {
@@ -89,7 +84,6 @@ module.exports = (sequelize) => {
       },
 
       status: {
-        // Estado de la publicación (puede ser nulo)
         type: DataTypes.BOOLEAN,
         defaultValue: true,
         allowNull: true,
