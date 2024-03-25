@@ -38,11 +38,6 @@ module.exports = (sequelize) => {
       password: {
         type: DataTypes.STRING,
         allowNull: true,
-        validate: {
-          len: {
-            args: [2, 8],
-          },
-        },
       },
 
       DNI: {
