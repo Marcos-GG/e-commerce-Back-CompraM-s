@@ -8,7 +8,7 @@ const controllerApplyFilters = async ({
   morePopular,
   page,
 }) => {
-  let pageSize = 10;
+  let pageSize = 21;
   let offset = (page - 1) * pageSize;
 
   const filtrosQueNoSonNull = {};
