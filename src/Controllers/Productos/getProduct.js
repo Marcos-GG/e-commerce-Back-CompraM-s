@@ -37,6 +37,7 @@ const getProductController = async (id, search, page) => {
         where: {
           category: idProduct.category,
           gender: idProduct.gender,
+          status: 1,
         },
       });
 
