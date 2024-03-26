@@ -3,7 +3,7 @@ const { Products, Like, User, Comment, Answer } = require("../../db");
 
 const getProductController = async (id, search, page) => {
   try {
-    let pageSize = 20;
+    let pageSize = 21;
     let offset = (page - 1) * pageSize;
 
     if (id) {
