@@ -119,6 +119,12 @@ const getProductController = async (id, search, page) => {
         },
       });
 
+      if (products.length === 0) {
+        throw new Error(
+          "No se encontraron productos con los términos aplicados."
+        );
+      }
+
       return {
         products,
         productosFiltrados: totalFilteredProducts,
