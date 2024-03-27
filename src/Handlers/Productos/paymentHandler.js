@@ -26,13 +26,14 @@ const paymentHandler = async (req, res) => {
     const bodyProducts = {
       items,
       back_urls: {
-        success: "http://localhost:5173/",
-        failure: "http://localhost:5173/",
-        pending: "http://localhost:5173/",
+        success: "https://e-commerce-front-compra-mas.vercel.app/",
+        failure: "https://e-commerce-front-compra-mas.vercel.app/",
+        pending: "https://e-commerce-front-compra-mas.vercel.app/",
       },
       //timer al finalizar
       auto_return: "approved",
-      notification_url: "https://1bhml602-38621.brs.devtunnels.ms/webhook",
+      notification_url:
+        "https://e-commerce-back-compramas.onrender.com/webhook",
       additional_info: userId,
     };
 
