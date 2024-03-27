@@ -47,7 +47,12 @@ const controllerApplyFilters = async ({
   if (productosFiltrados.length === 0)
     throw new Error("No se encontraron productos con los filtros aplicados");
 
-  return { productosFiltrados, totalProducts: productosFiltrados.length };
+  const totalProducts = await Products.count({
+    where: { ...filtrosQueNoSonNull, status: true },
+    order: orderOptions, // Aplicar opciones de
+  });
+
+  return { productosFiltrados, totalProducts: totalProducts };
 };
 
 module.exports = controllerApplyFilters;
